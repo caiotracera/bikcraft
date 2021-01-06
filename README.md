@@ -47,7 +47,7 @@
 # :rocket: About the project
 <b>Bikcraft</b> is a website for a fake bicycles manufacturer to show his products and allow customers to quote.
 
-* <b><a href="#">Demo</a></b>
+* <b><a href="https://bikcraft-green.vercel.app/">Demo</a></b>
 
 # :man_technologist: Technologies
 

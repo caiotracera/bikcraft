@@ -7,7 +7,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     max-width: 100vw;
     min-width: 100vw;
     overflow-x: hidden;

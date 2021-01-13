@@ -82,4 +82,31 @@ export default createGlobalStyle`
       border-color: #fff;
     }
   }
+
+  .button-black {
+    &:hover {
+      color: #000;
+      border-color: #000;
+    }
+  }
+
+  .subtitulo {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: .1em;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #000;
+      margin: 8px auto ;
+    }
+  }
 `;

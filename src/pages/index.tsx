@@ -1,9 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Header, Introduction, Menu } from '@/styles/Index/index';
+import {
+  Header,
+  Menu,
+  Introduction,
+  Products,
+  Product,
+} from '@/styles/Index/index';
 
 import BikcraftLogo from '../assets/images/bikcraft.svg';
+import ProdutoPasseio from '../assets/images/produtos/passeio.svg';
+import ProdutoEsporte from '../assets/images/produtos/esporte.svg';
+import ProdutoRetro from '../assets/images/produtos/retro.svg';
 
 const Home: React.FC = () => {
   return (
@@ -58,6 +67,51 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </Introduction>
+
+      <Products className="container">
+        <h2 className="subtitulo">Produtos</h2>
+        <ul>
+          <Product className="grid-1-3">
+            <div>
+              <ProdutoPasseio />
+            </div>
+            <h3>Passeio</h3>
+            <p>
+              Ainda assim, existem dúdidas a respeito de como a necessidade de
+              renovação.
+            </p>
+          </Product>
+
+          <Product className="grid-1-3">
+            <div>
+              <ProdutoEsporte />
+            </div>
+            <h3>Esporte</h3>
+            <p>
+              Ainda assim, existem dúdidas a respeito de como a necessidade de
+              renovação.
+            </p>
+          </Product>
+
+          <Product className="grid-1-3">
+            <div>
+              <ProdutoRetro />
+            </div>
+            <h3>Retro</h3>
+            <p>
+              Ainda assim, existem dúdidas a respeito de como a necessidade de
+              renovação.
+            </p>
+          </Product>
+        </ul>
+
+        <div>
+          <p>Clique aqui e veja os detalhes dos produtos</p>
+          <Link href="/products">
+            <a className="button button-black">Produtos</a>
+          </Link>
+        </div>
+      </Products>
     </>
   );
 };

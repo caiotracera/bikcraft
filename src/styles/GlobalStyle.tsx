@@ -58,4 +58,28 @@ export default createGlobalStyle`
   .grid-15 	{width: 880px;}
   .grid-16 	{width: 940px;}
   .grid-1-3	{width: 300px;}
+
+  p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .button {
+    border: 3px solid #fec63e;
+    padding: 10px 30px;
+    color: #fec63e;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
 `;

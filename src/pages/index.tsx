@@ -7,12 +7,17 @@ import {
   Introduction,
   Products,
   Product,
+  Portfolio,
+  PortfolioItem,
 } from '@/styles/Index/index';
 
 import BikcraftLogo from '../assets/images/bikcraft.svg';
 import ProdutoPasseio from '../assets/images/produtos/passeio.svg';
 import ProdutoEsporte from '../assets/images/produtos/esporte.svg';
 import ProdutoRetro from '../assets/images/produtos/retro.svg';
+import portfolioRetro from '../assets/images/portfolio/retro.jpg';
+import portfolioPasseio from '../assets/images/portfolio/passeio.jpg';
+import portfolioEsporte from '../assets/images/portfolio/esporte.jpg';
 
 const Home: React.FC = () => {
   return (
@@ -112,6 +117,33 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </Products>
+
+      <Portfolio>
+        <div className="container">
+          <h2 className="subtitulo">Portfólio</h2>
+
+          <ul>
+            <PortfolioItem className="grid-8">
+              <img src={portfolioRetro} alt="bike retro" />
+            </PortfolioItem>
+
+            <PortfolioItem className="grid-8">
+              <img src={portfolioPasseio} alt="bike retro" />
+            </PortfolioItem>
+
+            <PortfolioItem className="grid-16">
+              <img src={portfolioEsporte} alt="bike retro" />
+            </PortfolioItem>
+          </ul>
+
+          <div>
+            <p>Conheça mais o nosso portfólio</p>
+            <Link href="/products">
+              <a className="button">Portfólio</a>
+            </Link>
+          </div>
+        </div>
+      </Portfolio>
     </>
   );
 };

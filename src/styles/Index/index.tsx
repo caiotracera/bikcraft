@@ -133,3 +133,36 @@ export const Product = styled.li`
     padding: 10px 20px 20px;
   }
 `;
+
+export const Portfolio = styled.section`
+  width: 100%;
+  background: #000;
+  padding: 40px 0;
+
+  .subtitulo {
+    color: #fec63e;
+
+    &:after {
+      background: #fec63e;
+    }
+  }
+
+  .container {
+    div {
+      clear: both;
+      text-align: center;
+      padding-top: 40px;
+
+      p {
+        margin-bottom: 20px;
+        color: #fff;
+      }
+    }
+  }
+`;
+
+export const PortfolioItem = styled.li`
+  &:last-child {
+    margin-top: 20px;
+  }
+`;

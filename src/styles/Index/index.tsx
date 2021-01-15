@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BackgroundImg from '../../assets/images/bg.jpg';
+import linhasImg from '../../assets/images/linhas.png';
 
 export const Header = styled.header`
   position: fixed;
@@ -164,5 +165,63 @@ export const Portfolio = styled.section`
 export const PortfolioItem = styled.li`
   &:last-child {
     margin-top: 20px;
+  }
+`;
+
+export const Quality = styled.section`
+  padding: 60px 0;
+
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  div {
+    clear: both;
+    text-align: center;
+    padding-top: 40px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+
+  &:after {
+    content: '';
+    width: 634px;
+    height: 83px;
+    display: block;
+    background: url(${linhasImg}) no-repeat center;
+    position: absolute;
+    top: 209px;
+    right: 162px;
+    z-index: -5;
+  }
+`;
+
+export const QualityItem = styled.li`
+  text-align: center;
+  padding: 0 40px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #000;
+      margin: 6px auto 10px auto;
+    }
   }
 `;

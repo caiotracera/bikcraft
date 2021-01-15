@@ -109,4 +109,8 @@ export default createGlobalStyle`
       margin: 8px auto ;
     }
   }
+
+  img {
+    display: block;
+  }
 `;

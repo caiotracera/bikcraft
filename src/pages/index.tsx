@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 
 import {
@@ -11,6 +11,10 @@ import {
   PortfolioItem,
   Quality,
   QualityItem,
+  Break,
+  Footer,
+  FooterContainer,
+  CopyContainer,
 } from '@/styles/Index/index';
 
 import BikcraftLogo from '../assets/images/bikcraft.svg';
@@ -18,11 +22,17 @@ import ProdutoPasseio from '../assets/images/produtos/passeio.svg';
 import ProdutoEsporte from '../assets/images/produtos/esporte.svg';
 import ProdutoRetro from '../assets/images/produtos/retro.svg';
 import BikcraftQualidade from '../assets/images/bikcraft-qualidade.svg';
+import FacebookIcon from '../assets/images/redes-sociais/facebook.svg';
+import InstragramIcon from '../assets/images/redes-sociais/instagram.svg';
+import TwitterIcon from '../assets/images/redes-sociais/twitter.svg';
 import portfolioRetro from '../assets/images/portfolio/retro.jpg';
 import portfolioPasseio from '../assets/images/portfolio/passeio.jpg';
 import portfolioEsporte from '../assets/images/portfolio/esporte.jpg';
 
 const Home: React.FC = () => {
+  const currentYear = useMemo(() => {
+    return new Date().getFullYear();
+  }, []);
   return (
     <>
       <Header>
@@ -176,6 +186,72 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </Quality>
+
+      <Break>
+        <blockquote>
+          <p>
+            “O verdadeiro segredo da felicidade está em ter um genuíno interesse
+            por todos os detalhes da vida cotidiana.”
+          </p>
+          <cite>WILLIAM MORRIS</cite>
+        </blockquote>
+      </Break>
+
+      <Footer>
+        <FooterContainer>
+          <div className="container">
+            <div className="grid-8 historia">
+              <h3>Nossa história</h3>
+              <p>
+                Quando iniciamos a Bikcraft queriamos apenas um produto que
+                adoraríamos utilizar. Eramos apaixonados por pedalar e também
+                por fazer as coisas com as nossas próprias mãos. Assim surgiu um
+                sonho na garagem da nossa casa.
+              </p>
+            </div>
+
+            <div className="grid-4 contato">
+              <h3>Contato</h3>
+              <p>
+                <ul>
+                  <li>- +55 21 9999-9999</li>
+                  <li>- contato@bikcraft.com</li>
+                  <li>- Rua Ali Perto - Botafogo</li>
+                </ul>
+              </p>
+            </div>
+
+            <div className="grid-4 sociais">
+              <h3>Redes sociais</h3>
+              <ul>
+                <li>
+                  <a>
+                    <FacebookIcon />
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <InstragramIcon />
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <TwitterIcon />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </FooterContainer>
+
+        <CopyContainer>
+          <div className="container">
+            <p className="grid-16">
+              Bikcraft {currentYear} - Alguns direitos reservados.
+            </p>
+          </div>
+        </CopyContainer>
+      </Footer>
     </>
   );
 };

@@ -27,7 +27,7 @@ export default createGlobalStyle`
   }
 
   .container:after, .container:before {
-    content: " ";
+    content: "";
     display: table;
   }
 

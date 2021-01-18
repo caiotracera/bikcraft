@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import Link from 'next/link';
 
+import Header from '@/components/Header';
+
 import {
-  Header,
-  Menu,
   Introduction,
   Products,
   Product,
@@ -15,9 +15,8 @@ import {
   Footer,
   FooterContainer,
   CopyContainer,
-} from '@/styles/Index/index';
+} from '@/styles/pages/Index/index';
 
-import BikcraftLogo from '../assets/images/bikcraft.svg';
 import ProdutoPasseio from '../assets/images/produtos/passeio.svg';
 import ProdutoEsporte from '../assets/images/produtos/esporte.svg';
 import ProdutoRetro from '../assets/images/produtos/retro.svg';
@@ -35,41 +34,7 @@ const Home: React.FC = () => {
   }, []);
   return (
     <>
-      <Header>
-        <div className="container">
-          <Link href="/">
-            <a className="grid-2">
-              <BikcraftLogo />
-            </a>
-          </Link>
-
-          <Menu className="grid-14">
-            <ul>
-              <li>
-                <Link href="/about">
-                  <a>Sobre</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <a>Produtos</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio">
-                  <a>Portfólio</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a>Contato</a>
-                </Link>
-              </li>
-            </ul>
-          </Menu>
-        </div>
-      </Header>
-
+      <Header />
       <Introduction>
         <div className="container">
           <h1>Bicicletas feitas a mão</h1>
